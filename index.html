@@ -1,42 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>tnysupply</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: sans-serif; padding: 20px; background: #f7f7f7; }
-    header { background: #111; color: white; text-align: center; padding: 20px; }
-    h2 { margin-top: 30px; }
-    a { color: #007bff; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 200px;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .flex-pair {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .flex-pair div {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+    img.clean-pic {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "✔️ ";
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px 10px;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .button:hover {
+      background: #444;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin: 40px 0;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>tnysupply</h1>
-    <p>Clean Kicks • Drip Fits • Airsoft Attachments</p>
-  </header>
 
+<header>
+  <img src="logo.png" alt="TNY Supply Logo" />
+  <h1>tnysupply</h1>
+  <p>Fresh fits, fresh kicks, fresh start</p>
+</header>
+
+<section>
   <h2>What I Offer</h2>
   <ul>
     <li>New & used clothes and shoes</li>
-    <li>Shoe cleaning — fresh like new</li>
-    <li>Airsoft parts (sights, beams, etc.)</li>
+    <li>Professional shoe cleaning (scroll down ⬇️)</li>
+    <li><s>Airsoft Attachments (On Hold)</s></li>
   </ul>
+</section>
 
-  <h2>Payments</h2>
-  <p>Zelle, Cash App, Apple Pay</p>
+<section>
+  <h2>🧼 Shoe Cleaning Showcase</h2>
+  <p>Jordan 5 “Laney” — full cleaning transformation</p>
 
-  <h2>Shipping</h2>
-  <p>3–4 day shipping — all handled by me</p>
+  <div class="flex-pair">
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="before1.jpg" class="clean-pic" alt="Before 1" />
+    </div>
+    <div>
+      <p><strong>After</strong></p>
+      <img src="after1.jpg" class="clean-pic" alt="After 1" />
+    </div>
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="before2.jpg" class="clean-pic" alt="Before 2" />
+    </div>
+    <div>
+      <p><strong>After</strong></p>
+      <img src="after2.jpg" class="clean-pic" alt="After 2" />
+    </div>
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="before3.jpg" class="clean-pic" alt="Before 3" />
+    </div>
+    <div>
+      <p><strong>After</strong></p>
+      <img src="after3.jpg" class="clean-pic" alt="After 3" />
+    </div>
+  </div>
 
-  <h2>Contact</h2>
-  <p>
-    Instagram: <a href="https://instagram.com/mex_to_ny">@mex_to_ny</a><br>
-    Email: <a href="mailto:tonymogon78@gmail.com">tonymogon78@gmail.com</a>
-  </p>
+  <div style="margin-top: 30px;">
+    <h3>What We Did</h3>
+    <ul>
+      <li>Deep sole & upper cleaning</li>
+      <li>Netting scrub & lace refresh</li>
+      <li>Deoxidation prep</li>
+    </ul>
+  </div>
+</section>
 
-  <footer style="margin-top: 40px; text-align: center; color: #777;">
-    &copy; 2025 tnysupply
-  </footer>
+<section>
+  <h2>💸 Payment Options</h2>
+  <ul>
+    <li>Cash App: <strong>$Tony2slaze</strong></li>
+    <li>Zelle: <strong>tono89877@gmail.com</strong></li>
+    <li>Apple Pay: <strong>(Phone # Coming Soon)</strong></li>
+  </ul>
+</section>
+
+<section>
+  <h2>📬 Contact Me</h2>
+  <a href="https://instagram.com/mex_to_ny" class="button" target="_blank">Instagram</a>
+  <a href="mailto:tonymogon78@gmail.com" class="button">Email Me</a>
+</section>
+
+<footer>
+  &copy; 2025 tnysupply. Built by one man, for the culture.
+</footer>
+
 </body>
 </html>
