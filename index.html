@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #f4f4f4;
       color: #222;
       margin: 0;
       padding: 0;
@@ -19,7 +19,7 @@
       text-align: center;
     }
     header img {
-      max-width: 180px;
+      max-width: 200px;
     }
     section {
       padding: 20px;
@@ -46,10 +46,17 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "✔️ ";
+    }
     .button {
       display: inline-block;
       padding: 10px 20px;
-      margin: 10px;
+      margin: 5px 10px;
       background: #222;
       color: white;
       text-decoration: none;
@@ -58,33 +65,11 @@
     .button:hover {
       background: #444;
     }
-    form input, form textarea {
-      display: block;
-      width: 100%;
-      max-width: 400px;
-      margin: 10px auto;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
     footer {
       text-align: center;
       font-size: 0.9em;
       color: #777;
       margin: 40px 0;
-    }
-    .product {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .product img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .product button {
-      margin-top: 10px;
     }
   </style>
 </head>
@@ -97,40 +82,12 @@
 </header>
 
 <section>
-  <h2>🛑 Scam Warning & Return Info</h2>
-  <p>Only use payment methods listed below. Beware of fake accounts. For shoe cleanings, send shoes to:</p>
-  <strong>132 E 163rd St, Gardena, CA 90248</strong>
-</section>
-
-<section>
-  <h2>❌ Clothing Sales (On Hold)</h2>
-  <p>We're not selling clothes at the moment. Stay tuned!</p>
-</section>
-
-<section>
-  <h2>🎯 Airsoft Attachments (Shipping Available)</h2>
-  <p>Click to add to cart. DM or send payment to complete your order.</p>
-
-  <div class="flex-pair">
-    <div class="product">
-      <p><strong>Reflex Sight – $50</strong></p>
-      <img src="reflex1.jpg" alt="Reflex Sight 1" />
-      <button class="button">Add to Cart</button>
-    </div>
-    <div class="product">
-      <p><strong>Beam Flashlight – $25</strong></p>
-      <img src="beam1.jpg" alt="Beam Flashlight 1" />
-      <button class="button">Add to Cart</button>
-    </div>
-    <div class="product">
-      <p><strong>Reflex Sight – Side View</strong></p>
-      <img src="reflex2.jpg" alt="Reflex Sight 2" />
-    </div>
-    <div class="product">
-      <p><strong>Beam Flashlight – Close Up</strong></p>
-      <img src="beam2.jpg" alt="Beam Flashlight 2" />
-    </div>
-  </div>
+  <h2>What I Offer</h2>
+  <ul>
+    <li><s>New & used clothes (On Hold)</s></li>
+    <li>Professional shoe cleaning (scroll down ⬇️)</li>
+    <li>Airsoft Attachments</li>
+  </ul>
 </section>
 
 <section>
@@ -140,50 +97,58 @@
   <div class="flex-pair">
     <div>
       <p><strong>Before</strong></p>
-      <img src="before1.jpg" class="clean-pic" />
+      <img src="before1.jpg" class="clean-pic" alt="Before 1" />
     </div>
     <div>
       <p><strong>After</strong></p>
-      <img src="after1.jpg" class="clean-pic" />
+      <img src="after1.jpg" class="clean-pic" alt="After 1" />
     </div>
     <div>
       <p><strong>Before</strong></p>
-      <img src="before2.jpg" class="clean-pic" />
+      <img src="before2.jpg" class="clean-pic" alt="Before 2" />
     </div>
     <div>
       <p><strong>After</strong></p>
-      <img src="after2.jpg" class="clean-pic" />
+      <img src="after2.jpg" class="clean-pic" alt="After 2" />
     </div>
     <div>
       <p><strong>Before</strong></p>
-      <img src="before3.jpg" class="clean-pic" />
+      <img src="before3.jpg" class="clean-pic" alt="Before 3" />
     </div>
     <div>
       <p><strong>After</strong></p>
-      <img src="after3.jpg" class="clean-pic" />
+      <img src="after3.jpg" class="clean-pic" alt="After 3" />
     </div>
   </div>
 
-  <h3>What We Did</h3>
-  <ul>
-    <li>Deep sole & upper cleaning</li>
-    <li>Netting scrub & lace refresh</li>
-    <li>Deoxidation prep</li>
-  </ul>
+  <div style="margin-top: 30px;">
+    <h3>What We Did</h3>
+    <ul>
+      <li>Deep sole & upper cleaning</li>
+      <li>Netting scrub & lace refresh</li>
+      <li>Deoxidation prep</li>
+    </ul>
+  </div>
 </section>
 
 <section>
-  <h2>📅 Book a Shoe Cleaning</h2>
-  <p>Use the form below to request a cleaning. I’ll contact you to confirm details and payment.</p>
-  <form action="https://formsubmit.co/tonymogon78@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your name" required />
-    <input type="text" name="instagram" placeholder="Instagram @ or contact" required />
-    <input type="text" name="shoe" placeholder="Shoe type/model" required />
-    <input type="text" name="yellowing" placeholder="Is it yellowed? (Yes/No)" required />
-    <textarea name="address" placeholder="Your return shipping address" rows="3" required></textarea>
-    <input type="email" name="email" placeholder="Your email" required />
-    <button type="submit" class="button">Book My Cleaning</button>
-  </form>
+  <h2>🎯 Airsoft Attachments (Shipping Available)</h2>
+  <p>Click to add to cart. DM or send payment to complete your order.</p>
+
+  <div class="flex-pair">
+    <div>
+      <p><strong>Reflex Sight – $50</strong></p>
+      <img src="reflex1.jpg" class="clean-pic" alt="Reflex Sight Box" />
+      <img src="reflex2.jpg" class="clean-pic" alt="Reflex Sight Side" />
+      <button class="button">Add to Cart</button>
+    </div>
+    <div>
+      <p><strong>Beam Flashlight – $25</strong></p>
+      <img src="beam1.jpg" class="clean-pic" alt="Beam Box" />
+      <img src="beam2.jpg" class="clean-pic" alt="Beam Close-up" />
+      <button class="button">Add to Cart</button>
+    </div>
+  </div>
 </section>
 
 <section>
@@ -196,13 +161,27 @@
   <h2>💸 Payment Options</h2>
   <ul>
     <li>Cash App: <strong>$Tony2slaze</strong></li>
-    <li>Zelle/Chase: <strong>tono89877@gmail.com</strong></li>
-    <li>Apple Pay: <strong>(Phone # coming soon)</strong></li>
+    <li>Zelle: <strong>tono89877@gmail.com</strong></li>
+    <li>Apple Pay: <strong>(Phone # Coming Soon)</strong></li>
   </ul>
 </section>
 
+<section>
+  <h2>🚨 Stay Safe</h2>
+  <ul>
+    <li>Only trust this site and official IG <strong>@tny_supply</strong></li>
+    <li>If someone asks for payment outside of these methods, it’s not us</li>
+  </ul>
+</section>
+
+<section>
+  <h2>📦 Cleaning Return Address</h2>
+  <p>Send your shoes to:</p>
+  <p><strong>132 E 163rd St<br>Gardena, CA 90248</strong></p>
+</section>
+
 <footer>
-  &copy; 2025 tnysupply. Built for the culture.
+  &copy; 2025 tnysupply. Built by one man, for the culture.
 </footer>
 
 </body>
