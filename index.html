@@ -71,6 +71,13 @@
       color: #777;
       margin: 40px 0;
     }
+    #cart {
+      background: #eee;
+      padding: 15px;
+      border-radius: 8px;
+      display: none;
+      margin-top: 30px;
+    }
   </style>
 </head>
 <body>
@@ -84,77 +91,70 @@
 <section>
   <h2>What I Offer</h2>
   <ul>
-    <li><s>New & used clothes (On Hold)</s></li>
-    <li>Professional shoe cleaning (scroll down ⬇️)</li>
-    <li>Airsoft Attachments</li>
+    <li><s>New & used clothes and shoes (On Hold)</s></li>
+    <li>Professional shoe cleaning</li>
+    <li>Airsoft Attachments — beams, sights, and more</li>
   </ul>
 </section>
 
 <section>
   <h2>🧼 Shoe Cleaning Showcase</h2>
-  <p>Jordan 5 “Laney” — full cleaning transformation</p>
-
   <div class="flex-pair">
-    <div>
-      <p><strong>Before</strong></p>
-      <img src="before1.jpg" class="clean-pic" alt="Before 1" />
-    </div>
-    <div>
-      <p><strong>After</strong></p>
-      <img src="after1.jpg" class="clean-pic" alt="After 1" />
-    </div>
-    <div>
-      <p><strong>Before</strong></p>
-      <img src="before2.jpg" class="clean-pic" alt="Before 2" />
-    </div>
-    <div>
-      <p><strong>After</strong></p>
-      <img src="after2.jpg" class="clean-pic" alt="After 2" />
-    </div>
-    <div>
-      <p><strong>Before</strong></p>
-      <img src="before3.jpg" class="clean-pic" alt="Before 3" />
-    </div>
-    <div>
-      <p><strong>After</strong></p>
-      <img src="after3.jpg" class="clean-pic" alt="After 3" />
-    </div>
-  </div>
-
-  <div style="margin-top: 30px;">
-    <h3>What We Did</h3>
-    <ul>
-      <li>Deep sole & upper cleaning</li>
-      <li>Netting scrub & lace refresh</li>
-      <li>Deoxidation prep</li>
-    </ul>
+    <div><p><strong>Before</strong></p><img src="before1.jpg" class="clean-pic" /></div>
+    <div><p><strong>After</strong></p><img src="after1.jpg" class="clean-pic" /></div>
+    <div><p><strong>Before</strong></p><img src="before2.jpg" class="clean-pic" /></div>
+    <div><p><strong>After</strong></p><img src="after2.jpg" class="clean-pic" /></div>
+    <div><p><strong>Before</strong></p><img src="before3.jpg" class="clean-pic" /></div>
+    <div><p><strong>After</strong></p><img src="after3.jpg" class="clean-pic" /></div>
   </div>
 </section>
 
 <section>
   <h2>🎯 Airsoft Attachments (Shipping Available)</h2>
   <p>Click to add to cart. DM or send payment to complete your order.</p>
-
   <div class="flex-pair">
     <div>
       <p><strong>Reflex Sight – $50</strong></p>
-      <img src="reflex1.jpg" class="clean-pic" alt="Reflex Sight Box" />
-      <img src="reflex2.jpg" class="clean-pic" alt="Reflex Sight Side" />
-      <button class="button">Add to Cart</button>
+      <img src="reflex1.jpg" class="clean-pic" />
+      <a href="#" class="button" onclick="addToCart('Reflex Sight - $50')">Add to Cart</a>
     </div>
     <div>
       <p><strong>Beam Flashlight – $25</strong></p>
-      <img src="beam1.jpg" class="clean-pic" alt="Beam Box" />
-      <img src="beam2.jpg" class="clean-pic" alt="Beam Close-up" />
-      <button class="button">Add to Cart</button>
+      <img src="beam1.jpg" class="clean-pic" />
+      <a href="#" class="button" onclick="addToCart('Beam Flashlight - $25')">Add to Cart</a>
     </div>
+  </div>
+  <a href="#" class="button" onclick="showCart()">View Cart</a>
+  <div id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <h3>Next Step:</h3>
+    <p>Send payment to:</p>
+    <ul>
+      <li>Cash App: <strong>$Tony2slaze</strong></li>
+      <li>Zelle: <strong>tono89877@gmail.com</strong></li>
+    </ul>
+    <p>Then DM me on Instagram with what you ordered + screenshot of payment:</p>
+    <a href="https://instagram.com/tny_supply" class="button" target="_blank">DM @tny_supply</a>
   </div>
 </section>
 
 <section>
-  <h2>📬 Contact Me</h2>
-  <a href="https://instagram.com/tny_supply" class="button" target="_blank">Instagram</a>
-  <a href="mailto:tonymogon78@gmail.com" class="button">Email Me</a>
+  <h2>📲 Book a Shoe Cleaning</h2>
+  <p>Use the form below to request a cleaning. I’ll contact you to confirm details and payment.</p>
+  <form action="https://formsubmit.co/tonymogon78@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="https://tonyoz4.github.io/tnysupply.github.io">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Shoe Cleaning Booking">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="text" name="instagram" placeholder="Instagram Handle"><br><br>
+    <textarea name="shoes" placeholder="What shoes are you sending?" rows="3"></textarea><br><br>
+    <textarea name="requests" placeholder="Any special requests?" rows="2"></textarea><br><br>
+    <textarea name="address" placeholder="Return Address" rows="3"></textarea><br><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
+    <input type="submit" value="Book My Cleaning" class="button">
+  </form>
 </section>
 
 <section>
@@ -167,22 +167,45 @@
 </section>
 
 <section>
-  <h2>🚨 Stay Safe</h2>
-  <ul>
-    <li>Only trust this site and official IG <strong>@tny_supply</strong></li>
-    <li>If someone asks for payment outside of these methods, it’s not us</li>
-  </ul>
+  <h2>📬 Contact Me</h2>
+  <a href="https://instagram.com/tny_supply" class="button" target="_blank">Instagram</a>
+  <a href="mailto:tonymogon78@gmail.com" class="button">Email Me</a>
 </section>
 
 <section>
-  <h2>📦 Cleaning Return Address</h2>
-  <p>Send your shoes to:</p>
+  <h2>⚠️ Scam Warning</h2>
+  <p>I only use this website and my official Instagram @tny_supply. Never send money or info to anyone claiming to be me from another account.</p>
+</section>
+
+<section>
+  <h2>📦 Shoe Cleaning Shipping Address</h2>
   <p><strong>132 E 163rd St<br>Gardena, CA 90248</strong></p>
+  <p>Include your name, IG handle, and return address inside the box.</p>
 </section>
 
 <footer>
   &copy; 2025 tnysupply. Built by one man, for the culture.
 </footer>
+
+<script>
+  let cart = [];
+  function addToCart(item) {
+    cart.push(item);
+    alert(item + " added to cart!");
+  }
+  function showCart() {
+    const cartDiv = document.getElementById("cart");
+    const cartList = document.getElementById("cartItems");
+    cartList.innerHTML = "";
+    cart.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      cartList.appendChild(li);
+    });
+    cartDiv.style.display = "block";
+    cartDiv.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
 
 </body>
 </html>
