@@ -65,6 +65,12 @@
     .button:hover {
       background: #444;
     }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+      box-sizing: border-box;
+    }
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -94,12 +100,30 @@
   <h2>🧼 Shoe Cleaning Showcase</h2>
   <p>Jordan 5 “Laney” — full cleaning transformation</p>
   <div class="flex-pair">
-    <div><p><strong>Before</strong></p><img src="before1.jpg" class="clean-pic" alt="Before 1" /></div>
-    <div><p><strong>After</strong></p><img src="after1.jpg" class="clean-pic" alt="After 1" /></div>
-    <div><p><strong>Before</strong></p><img src="before2.jpg" class="clean-pic" alt="Before 2" /></div>
-    <div><p><strong>After</strong></p><img src="after2.jpg" class="clean-pic" alt="After 2" /></div>
-    <div><p><strong>Before</strong></p><img src="before3.jpg" class="clean-pic" alt="Before 3" /></div>
-    <div><p><strong>After</strong></p><img src="after3.jpg" class="clean-pic" alt="After 3" /></div>
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="before1.jpg" class="clean-pic" alt="Before 1" />
+    </div>
+    <div>
+      <p><strong>After</strong></p>
+      <img src="after1.jpg" class="clean-pic" alt="After 1" />
+    </div>
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="before2.jpg" class="clean-pic" alt="Before 2" />
+    </div>
+    <div>
+      <p><strong>After</strong></p>
+      <img src="after2.jpg" class="clean-pic" alt="After 2" />
+    </div>
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="before3.jpg" class="clean-pic" alt="Before 3" />
+    </div>
+    <div>
+      <p><strong>After</strong></p>
+      <img src="after3.jpg" class="clean-pic" alt="After 3" />
+    </div>
   </div>
 </section>
 
@@ -125,23 +149,15 @@
 <section>
   <h2>📲 Book a Shoe Cleaning</h2>
   <p>Use the form below to request a cleaning. I’ll contact you to confirm details and payment.</p>
-  <form action="mailto:tonymogon78@gmail.com" method="POST" enctype="text/plain" style="max-width:600px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required style="width:100%; padding:8px; margin:6px 0;"><br>
-
-    <label for="instagram">Instagram Handle:</label><br>
-    <input type="text" id="instagram" name="instagram" placeholder="@your_ig" style="width:100%; padding:8px; margin:6px 0;"><br>
-
-    <label for="shoes">What shoes are you sending?</label><br>
-    <textarea id="shoes" name="shoes" rows="3" style="width:100%; padding:8px; margin:6px 0;"></textarea><br>
-
-    <label for="requests">Any special requests?</label><br>
-    <textarea id="requests" name="requests" rows="2" style="width:100%; padding:8px; margin:6px 0;"></textarea><br>
-
-    <label for="address">Return Address:</label><br>
-    <textarea id="address" name="address" rows="3" style="width:100%; padding:8px; margin:6px 0;"></textarea><br>
-
-    <input type="submit" value="Book My Cleaning" class="button" style="margin-top:10px;">
+  <form action="https://formsubmit.co/tonymogon78@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="text" name="instagram" placeholder="Instagram Handle">
+    <textarea name="shoes" placeholder="What shoes are you sending?" rows="3"></textarea>
+    <textarea name="requests" placeholder="Any special requests?" rows="2"></textarea>
+    <textarea name="address" placeholder="Return Address" rows="3"></textarea>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="hidden" name="_autoresponse" value="Thanks for booking with TNY Supply. We’ll be in touch soon!">
+    <input type="submit" value="Book My Cleaning" class="button">
   </form>
 </section>
 
