@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: #f9f9f9;
       color: #222;
       margin: 0;
       padding: 0;
@@ -19,7 +19,7 @@
       text-align: center;
     }
     header img {
-      max-width: 200px;
+      max-width: 180px;
     }
     section {
       padding: 20px;
@@ -46,17 +46,10 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li::before {
-      content: "✔️ ";
-    }
     .button {
       display: inline-block;
       padding: 10px 20px;
-      margin: 5px 10px;
+      margin: 10px;
       background: #222;
       color: white;
       text-decoration: none;
@@ -65,18 +58,33 @@
     .button:hover {
       background: #444;
     }
+    form input, form textarea {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
     footer {
       text-align: center;
       font-size: 0.9em;
       color: #777;
       margin: 40px 0;
     }
-    #cart {
-      background: #eee;
-      padding: 15px;
-      border-radius: 8px;
-      display: none;
-      margin-top: 30px;
+    .product {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .product img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .product button {
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -89,81 +97,93 @@
 </header>
 
 <section>
-  <h2>What I Offer</h2>
-  <ul>
-    <li><s>New & used clothes and shoes (On Hold)</s></li>
-    <li>Professional shoe cleaning</li>
-    <li>Airsoft Attachments — beams, sights, and more</li>
-  </ul>
+  <h2>🛑 Scam Warning & Return Info</h2>
+  <p>Only use payment methods listed below. Beware of fake accounts. For shoe cleanings, send shoes to:</p>
+  <strong>132 E 163rd St, Gardena, CA 90248</strong>
 </section>
 
 <section>
-  <h2>🧼 Shoe Cleaning Showcase</h2>
-  <div class="flex-pair">
-    <div><p><strong>Before</strong></p><img src="before1.jpg" class="clean-pic" /></div>
-    <div><p><strong>After</strong></p><img src="after1.jpg" class="clean-pic" /></div>
-    <div><p><strong>Before</strong></p><img src="before2.jpg" class="clean-pic" /></div>
-    <div><p><strong>After</strong></p><img src="after2.jpg" class="clean-pic" /></div>
-    <div><p><strong>Before</strong></p><img src="before3.jpg" class="clean-pic" /></div>
-    <div><p><strong>After</strong></p><img src="after3.jpg" class="clean-pic" /></div>
-  </div>
+  <h2>❌ Clothing Sales (On Hold)</h2>
+  <p>We're not selling clothes at the moment. Stay tuned!</p>
 </section>
 
 <section>
   <h2>🎯 Airsoft Attachments (Shipping Available)</h2>
   <p>Click to add to cart. DM or send payment to complete your order.</p>
+
+  <div class="flex-pair">
+    <div class="product">
+      <p><strong>Reflex Sight – $50</strong></p>
+      <img src="reflex1.jpg" alt="Reflex Sight 1" />
+      <button class="button">Add to Cart</button>
+    </div>
+    <div class="product">
+      <p><strong>Beam Flashlight – $25</strong></p>
+      <img src="beam1.jpg" alt="Beam Flashlight 1" />
+      <button class="button">Add to Cart</button>
+    </div>
+    <div class="product">
+      <p><strong>Reflex Sight – Side View</strong></p>
+      <img src="reflex2.jpg" alt="Reflex Sight 2" />
+    </div>
+    <div class="product">
+      <p><strong>Beam Flashlight – Close Up</strong></p>
+      <img src="beam2.jpg" alt="Beam Flashlight 2" />
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🧼 Shoe Cleaning Showcase</h2>
+  <p>Jordan 5 “Laney” — full cleaning transformation</p>
+
   <div class="flex-pair">
     <div>
-      <p><strong>Reflex Sight – $50</strong></p>
-      <img src="reflex1.jpg" class="clean-pic" />
-      <a href="#" class="button" onclick="addToCart('Reflex Sight - $50')">Add to Cart</a>
+      <p><strong>Before</strong></p>
+      <img src="before1.jpg" class="clean-pic" />
     </div>
     <div>
-      <p><strong>Beam Flashlight – $25</strong></p>
-      <img src="beam1.jpg" class="clean-pic" />
-      <a href="#" class="button" onclick="addToCart('Beam Flashlight - $25')">Add to Cart</a>
+      <p><strong>After</strong></p>
+      <img src="after1.jpg" class="clean-pic" />
+    </div>
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="before2.jpg" class="clean-pic" />
+    </div>
+    <div>
+      <p><strong>After</strong></p>
+      <img src="after2.jpg" class="clean-pic" />
+    </div>
+    <div>
+      <p><strong>Before</strong></p>
+      <img src="before3.jpg" class="clean-pic" />
+    </div>
+    <div>
+      <p><strong>After</strong></p>
+      <img src="after3.jpg" class="clean-pic" />
     </div>
   </div>
-  <a href="#" class="button" onclick="showCart()">View Cart</a>
-  <div id="cart">
-    <h2>Your Cart</h2>
-    <ul id="cartItems"></ul>
-    <h3>Next Step:</h3>
-    <p>Send payment to:</p>
-    <ul>
-      <li>Cash App: <strong>$Tony2slaze</strong></li>
-      <li>Zelle: <strong>tono89877@gmail.com</strong></li>
-    </ul>
-    <p>Then DM me on Instagram with what you ordered + screenshot of payment:</p>
-    <a href="https://instagram.com/tny_supply" class="button" target="_blank">DM @tny_supply</a>
-  </div>
+
+  <h3>What We Did</h3>
+  <ul>
+    <li>Deep sole & upper cleaning</li>
+    <li>Netting scrub & lace refresh</li>
+    <li>Deoxidation prep</li>
+  </ul>
 </section>
 
 <section>
-  <h2>📲 Book a Shoe Cleaning</h2>
+  <h2>📅 Book a Shoe Cleaning</h2>
   <p>Use the form below to request a cleaning. I’ll contact you to confirm details and payment.</p>
   <form action="https://formsubmit.co/tonymogon78@gmail.com" method="POST">
-    <input type="hidden" name="_next" value="https://tonyoz4.github.io/tnysupply.github.io">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Shoe Cleaning Booking">
-    <input type="hidden" name="_template" value="table">
-    <input type="text" name="name" placeholder="Your Name" required><br><br>
-    <input type="text" name="instagram" placeholder="Instagram Handle"><br><br>
-    <textarea name="shoes" placeholder="What shoes are you sending?" rows="3"></textarea><br><br>
-    <textarea name="requests" placeholder="Any special requests?" rows="2"></textarea><br><br>
-    <textarea name="address" placeholder="Return Address" rows="3"></textarea><br><br>
-    <input type="email" name="email" placeholder="Your Email" required><br><br>
-    <input type="submit" value="Book My Cleaning" class="button">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="text" name="instagram" placeholder="Instagram @ or contact" required />
+    <input type="text" name="shoe" placeholder="Shoe type/model" required />
+    <input type="text" name="yellowing" placeholder="Is it yellowed? (Yes/No)" required />
+    <textarea name="address" placeholder="Your return shipping address" rows="3" required></textarea>
+    <input type="email" name="email" placeholder="Your email" required />
+    <button type="submit" class="button">Book My Cleaning</button>
   </form>
-</section>
-
-<section>
-  <h2>💸 Payment Options</h2>
-  <ul>
-    <li>Cash App: <strong>$Tony2slaze</strong></li>
-    <li>Zelle: <strong>tono89877@gmail.com</strong></li>
-    <li>Apple Pay: <strong>(Phone # Coming Soon)</strong></li>
-  </ul>
 </section>
 
 <section>
@@ -173,39 +193,17 @@
 </section>
 
 <section>
-  <h2>⚠️ Scam Warning</h2>
-  <p>I only use this website and my official Instagram @tny_supply. Never send money or info to anyone claiming to be me from another account.</p>
-</section>
-
-<section>
-  <h2>📦 Shoe Cleaning Shipping Address</h2>
-  <p><strong>132 E 163rd St<br>Gardena, CA 90248</strong></p>
-  <p>Include your name, IG handle, and return address inside the box.</p>
+  <h2>💸 Payment Options</h2>
+  <ul>
+    <li>Cash App: <strong>$Tony2slaze</strong></li>
+    <li>Zelle/Chase: <strong>tono89877@gmail.com</strong></li>
+    <li>Apple Pay: <strong>(Phone # coming soon)</strong></li>
+  </ul>
 </section>
 
 <footer>
-  &copy; 2025 tnysupply. Built by one man, for the culture.
+  &copy; 2025 tnysupply. Built for the culture.
 </footer>
-
-<script>
-  let cart = [];
-  function addToCart(item) {
-    cart.push(item);
-    alert(item + " added to cart!");
-  }
-  function showCart() {
-    const cartDiv = document.getElementById("cart");
-    const cartList = document.getElementById("cartItems");
-    cartList.innerHTML = "";
-    cart.forEach(item => {
-      const li = document.createElement("li");
-      li.textContent = item;
-      cartList.appendChild(li);
-    });
-    cartDiv.style.display = "block";
-    cartDiv.scrollIntoView({ behavior: "smooth" });
-  }
-</script>
 
 </body>
 </html>
